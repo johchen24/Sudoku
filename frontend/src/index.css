@@ -1,0 +1,52 @@
+@import 'primereact/resources/themes/lara-light-indigo/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sudoku-cell {
+    @apply w-10 h-10 text-center text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500;
+    @apply flex items-center justify-center;
+    @apply appearance-none;
+  }
+  
+  .sudoku-cell-initial {
+    @apply bg-cell-initial text-gray-700;
+  }
+  
+  .sudoku-cell-empty {
+    @apply bg-cell-empty;
+  }
+
+  /* Add thicker borders for 3x3 boxes */
+  .sudoku-cell:nth-child(3n) {
+    @apply border-r-2 border-r-gray-800;
+  }
+  
+  .sudoku-cell:nth-child(9n) {
+    @apply border-r-[1px] border-r-gray-300;
+  }
+  
+  .sudoku-cell:nth-child(n+19):nth-child(-n+27),
+  .sudoku-cell:nth-child(n+46):nth-child(-n+54) {
+    @apply border-b-2 border-b-gray-800;
+  }
+
+  /* Remove spinner buttons from number input */
+  .sudoku-cell::-webkit-inner-spin-button,
+  .sudoku-cell::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .sudoku-cell:not(:disabled):hover {
+    background-color: var(--hover-bg) !important;
+  }
+
+  button:hover {
+    background-color: var(--hover-bg) !important;
+  }
+} 

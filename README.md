@@ -6,7 +6,7 @@ A full-stack Sudoku game application built with FastAPI and React.
 
 - Python 3.8 or higher
 - Node.js 14 or higher
-- pip (Python package manager)
+<!-- - pip (Python package manager)
 
 ## Backend Setup
 
@@ -64,4 +64,4 @@ The frontend will start on http://localhost:3000
   - React
   - TypeScript
   - Styled Components
-  - Axios 
+  - Axios  -->

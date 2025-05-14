@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
-from .sudoku import SudokuGame
+from sudoku import SudokuGame
 
 app = FastAPI()
 
